@@ -16,8 +16,8 @@ class ItemsController extends GetxController {
   fetchData() async {
     try {
       isLoading(true);
-      http.Response response = await http.get(
-          Uri.tryParse('https://dev.bynail.xyz/test_api/crud_app/view.php')!);
+      http.Response response = await http.get(Uri.tryParse(
+          'https://dev.bynail.xyz/test_api/crud_app/view_all_items.php')!);
       if (response.statusCode == 200) {
         //data ssuccessfully
         var result = jsonDecode(response.body);
