@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_crud/views/login.dart';
 import 'package:get/get.dart';
 
 import 'views/home.dart';
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: Home(),
+      home: LoginPage(),
     );
   }
 }

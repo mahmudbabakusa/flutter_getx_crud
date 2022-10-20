@@ -15,19 +15,19 @@ class Home extends StatelessWidget {
                 child: CircularProgressIndicator(),
               )
             : ListView.builder(
-                itemCount: itemsController.itemsModel?.length ?? 0,
+                // itemCount: itemsController.itemsModel?.length ?? 0,
                 // itemCount: openseaController.openseaModel?.assets?.length ?? 0,
                 itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(
-                        itemsController.itemsModel?[index].name ?? 'no name'),
-                    subtitle: Text(itemsController.itemsModel![index].email ??
-                        'no description'),
-                    leading: itemsController.itemsModel![index].image == null
-                        ? Icon(Icons.image)
-                        : Image.network(
-                            itemsController.itemsModel![index].image!),
-                  );
-                })));
+                return ListTile(
+                  title: Text(
+                      itemsController.itemsModel?[index].name ?? 'no name'),
+                  subtitle: Text(itemsController.itemsModel![index].email ??
+                      'no description'),
+                  leading: itemsController.itemsModel![index].image == null
+                      ? Icon(Icons.image)
+                      : Image.network(
+                          itemsController.itemsModel![index].image!),
+                );
+              })));
   }
 }
